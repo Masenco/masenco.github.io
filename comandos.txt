@@ -1,3 +1,0 @@
-git add . = Guardar cambios
-git commit -m = Comentar que cambiamos
-git push origin main = Subir cambios

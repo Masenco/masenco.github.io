@@ -39,7 +39,7 @@
         <nav>
             <ul>
                 <li><a href="#top">Home</a></li>
-                <li><a href="#projects">Projectos</a></li>
+                <li><a href="#proyects">Projectos</a></li>
                 <li><a href="#about">Sobre mí</a></li>
                 <li><a href="#contact">Contacto</a></li>
             </ul>
@@ -60,12 +60,12 @@
    -------------------------------------->
     <div class="banner">
         <div class="bg-image">
-            <div class="position-image"> <img src="images/bgif.gif" alt=""></div>
+            <div class="position-image"> <img src="" alt=""></div>
         </div>
         <div class="contenido-banner" data-0-top="opacity:0;left:200px;" data-100-top="opacity:1;left:0px;">
             <h1><span>Tomás Atampi</span></h1>
             <p><span class="typing"></span> <br>Haga un recorrido por mis proyectos y trabajos.</p>
-            <a href="#projects">Proyectos</a>
+            <a href="#proyects">Proyectos</a>
         </div>
     </div>
     <!-------------- Proyectos --------------
@@ -120,18 +120,19 @@
     <!-------------- Contacto --------------
    -------------------------------------->
 
-    <section class="contact">
+    <section class="contact" id="contact">
         <div class="contenido_contact">
-          <div class="bg-image"><img src="images/Captura.PNG" alt=""></div>
-            <h2>¿Tenés un proyecto en mente?</h2>
-            <p>¿Queres saber más de mi?</p>
-            <div class="list-contact">
-            <ul>
-                <li><a href="">Sobre mí</a></li>
-                <li><a href="">Contacto</a></li>
-            </ul>
-        </div>
-        </div>
+            <div class="links-contact">
+                <h2>¿Tenés un proyecto en mente?</h2>
+                <p>¿Queres saber más de mi?</p>
+                <div class="list-contact">
+                    <ul>
+                        <li><a href="">Sobre mí</a></li>
+                        <li><a href="">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+            </div>
     </section>
 
     <!--------------- Footer ----------------
@@ -148,10 +149,12 @@
             loop: true,
 
         });
+
     </script>
     <script src="skrollr.js"></script>
     <script type="text/javascript">
         var s = skrollr.init();
+
     </script>
     <script type="text/javascript">
         window.addEventListener('scroll', function() {
@@ -164,5 +167,8 @@
             const mostrarNav = document.querySelector('.nav-min_logo');
             mostrarNav.classList.toggle("pgj", window.scrollY > 200);
         });
+
     </script>
-</body></html>
+</body>
+
+</html>

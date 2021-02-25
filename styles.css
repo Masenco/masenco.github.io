@@ -34,7 +34,11 @@
 }
 
 html {
-    scroll-behavior: ;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #030303;
 }
 
 a {
@@ -347,16 +351,17 @@ li {
 }
 
 .contenido-banner a {
-    position: relative;
+    font-family: 'FuturaStdBook';
     font-size: 1em;
-    padding: 6px 10px;
-    background: var(--main-btn-color);
-    transition: .3s;
-    margin-left: 6px;
+    padding: 6px 40px;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    transition: .4s;
 }
 
 .contenido-banner a:hover {
-    letter-spacing: 2px;
+    border-color: #FFB96C;
+    padding: 8px 45px;
 }
 
 /*-----------------------------------------
@@ -479,52 +484,47 @@ section .sobre-mi {
 /*-----------------------------------------
 ----------- Sección  Contacto ------------
 ------------------------------------------*/
-section.contact {
+.contact {
     position: relative;
     display: flex;
     width: 100%;
-    height: 600px;
+    height: 100vh;
     display: flex;
-    background: #000;
+    background: #010101;
     overflow: hidden;
+    justify-content: center;
 }
 
 .contenido_contact {
     position: relative;
     display: flex;
-    flex-direction: column;
     width: 1100px;
-    height: auto;
+    height: 100%;
     top: 0;
-    left; 0;
+    left;
+    0;
     margin-left: auto;
     margin-right: auto;
+    background-image: url(images/captura3.png);
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+}
+
+.links-contact {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-top: 6em;
+    width: 100%;
+    height: auto;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
-.bg-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    z-index: 0;
-}
-
-.bg-image img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-}
-
-.contenido_contact h2 {
+.links-contact h2 {
+    text-align: center;
     position: relative;
     font-size: 2em;
     color: #fff;
@@ -572,7 +572,7 @@ section.contact {
 }
 
 .list-contact ul li a:hover {
- border-color: #FFB96C;
+    border-color: #FFB96C;
     padding: 8px 45px;
 }
 
