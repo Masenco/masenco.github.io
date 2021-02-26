@@ -9,6 +9,11 @@
 }
 
 @font-face {
+    font-family: 'FuturaStdBold';
+    src: url('fonts/FuturaStdBold.woff') format('woff');
+}
+
+@font-face {
     font-family: 'FuturaStdExtraBold';
     src: url('fonts/FuturaStd-ExtraBold.woff') format('woff');
 }
@@ -18,7 +23,6 @@
     padding: 0;
     box-sizing: border-box;
     position: relative;
-
 }
 
 :root {
@@ -34,7 +38,7 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: ;
 }
 
 body {
@@ -262,9 +266,10 @@ li {
     position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     min-height: 100vh;
-    font-family: "Poppins", sans-serif;
 }
 
 .banner::before {
@@ -304,10 +309,10 @@ li {
 .position-image {
     position: absolute;
     display: flex;
-    width: 40%;
+    width: 100%;
     height: 100%;
     top: 0;
-    left: 40%;
+    left: 0;
 }
 
 .position-image img {
@@ -322,46 +327,139 @@ li {
 
 .contenido-banner {
     position: relative;
-    margin-top: 12vw;
-    margin-left: 6vw;
+    display: flex;
+    flex-direction: column;
+    margin-top: 14em;
     max-width: 50vw;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
     height: auto;
     justify-content: flex-start;
+    justify-content: center;
+    text-align: center;
     z-index: 100;
 }
 
 .contenido-banner h1 {
     position: relative;
     color: #fff;
-    font-size: 4em;
-}
-
-.contenido-banner p {
-    position: relative;
-    font-size: 1em;
-    color: #fff;
-    margin-top: -15px;
-    margin-left: 8px;
-    margin-bottom: 80px;
+    font-size: 3em;
+    font-family: 'FuturaStdExtraBold';
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .contenido-banner .typing {
-    color: crimson;
-    font-size: 1.3em;
+    position: relative;
+    display: flex;
+    color: #fff;
+    height: 1.3em;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: 600;
+    font-family: 'FuturaStdBold';
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 1em;
 }
 
-.contenido-banner a {
-    font-family: 'FuturaStdBook';
-    font-size: 1em;
-    padding: 6px 40px;
+.contenido-banner .recorrido {
+    position: relative;
+    color: #fff9;
+    margin-top: 3em;
+    margin-left: 8px;
+    margin-bottom: 1em;
+    font: italic 16px/1.7 georgia;
+    letter-spacing: 1px;
+}
+
+.link_sobre-mi,
+.link_contact {
+    position: absolute;
+    width: auto;
+    height: auto;
+    font-size: 14px;
+    color: #fff;
+    font-family: 'FuturaStdBold';
+    z-index: 2;
+    text-transform: uppercase;
+    letter-spacing: 0.20em;
+}
+
+.link_sobre-mi {
+    top: 50%;
+    left: 80px;
+}
+
+.link_sobre-mi::before,
+.link_contact::before {
+    display: block;
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    width: 1.5px;
+    height: 15px;
+    background: #ffb96c;
+    content: '';
+    transition: .3s;
+}
+
+.link_sobre-mi:hover::before,
+.link_contact:hover::before {
+    height: 22px;
+}
+
+.link_sobre-mi::after,
+.link_contact::after {
+    display: block;
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    width: 1.5px;
+    height: 15px;
+    background: #ffb96c;
+    content: '';
+    transition: .3s;
+}
+
+.link_sobre-mi:hover::after,
+.link_contact:hover::after {
+    height: 22px;
+}
+
+.link_contact {
+    top: 50%;
+    right: 80px;
+}
+
+.botton-proyects {
+    font-family: 'FuturaStdBold';
+    letter-spacing: 3px;
+    display: flex;
+    width: 11em;
+    height: 3.7em;
+    font-size: 12px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
     border: 2px solid #fff;
+    justify-content: center;
+    align-items: center;
     border-radius: 50px;
-    transition: .4s;
+    transition: .3s;
+    text-transform: uppercase;
+    font-weight: 500;
 }
 
 .contenido-banner a:hover {
     border-color: #FFB96C;
-    padding: 8px 45px;
+    color: #FFB96C;
+    letter-spacing: 5px;
+    width: 12em;
 }
 
 /*-----------------------------------------
@@ -480,7 +578,6 @@ section .sobre-mi {
     font-family: 'FuturaStdExtraBold';
 }
 
-
 /*-----------------------------------------
 ----------- Sección  Contacto ------------
 ------------------------------------------*/
@@ -517,7 +614,7 @@ section .sobre-mi {
     position: relative;
     padding-top: 6em;
     width: 100%;
-    height: auto;
+    height: 100vh;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -545,14 +642,14 @@ section .sobre-mi {
     position: relative;
     margin-top: 5em;
     width: auto;
-    height: auto;
+    height: 50px;
 }
 
 .list-contact ul {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 50px;
+    height: 100%;
     justify-content: space-between;
     align-items: center;
 }
@@ -563,17 +660,30 @@ section .sobre-mi {
 }
 
 .list-contact ul li a {
-    font-family: 'FuturaStdBook';
-    font-size: 1em;
-    padding: 6px 40px;
+    font-family: 'FuturaStdBold';
+    letter-spacing: 3px;
+    display: flex;
+    width: 11em;
+    height: 3.7em;
+    font-size: 12px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
     border: 2px solid #fff;
+    justify-content: center;
+    align-items: center;
     border-radius: 50px;
-    transition: .4s;
+    transition: .3s;
+    text-transform: uppercase;
+    font-weight: 500;
 }
 
 .list-contact ul li a:hover {
     border-color: #FFB96C;
-    padding: 8px 45px;
+    color: #FFB96C;
+    letter-spacing: 5px;
+    width: 12em;
 }
 
 /*-----------------------------------------

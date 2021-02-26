@@ -59,13 +59,16 @@
     <!-------------- Banner --------------
    -------------------------------------->
     <div class="banner">
+        <div class="link_sobre-mi"><a href="#sobre-mi">Sobre mí</a></div>
+        <div class="link_contact"><a href="#contact">Contacto</a></div>
         <div class="bg-image">
             <div class="position-image"> <img src="" alt=""></div>
         </div>
-        <div class="contenido-banner" data-0-top="opacity:0;left:200px;" data-100-top="opacity:1;left:0px;">
-            <h1><span>Tomás Atampi</span></h1>
-            <p><span class="typing"></span> <br>Haga un recorrido por mis proyectos y trabajos.</p>
-            <a href="#proyects">Proyectos</a>
+        <div class="contenido-banner">
+            <h1 data-0-top="opacity:0;left:600px;" data-100-top="opacity:1;left:0px;">Tomás Atampi</h1>
+            <span class="typing" data-0-top="opacity:0;left:-600px;" data-100-top="opacity:1;left:0px;"></span>
+            <p class="recorrido" data-0-top="opacity:0;left:600px;" data-100-top="opacity:1;left:0px;">Haga un recorrido por mis proyectos y trabajos.</p>
+            <a href="#proyects" class="botton-proyects" data-0-top="opacity:0;left:-600px;" data-100-top="opacity:1;left:0px;">Proyectos</a>
         </div>
     </div>
     <!-------------- Proyectos --------------
@@ -128,11 +131,10 @@
                 <div class="list-contact">
                     <ul>
                         <li><a href="">Sobre mí</a></li>
-                        <li><a href="">Contacto</a></li>
                     </ul>
                 </div>
             </div>
-            </div>
+        </div>
     </section>
 
     <!--------------- Footer ----------------
@@ -149,12 +151,10 @@
             loop: true,
 
         });
-
     </script>
     <script src="skrollr.js"></script>
     <script type="text/javascript">
         var s = skrollr.init();
-
     </script>
     <script type="text/javascript">
         window.addEventListener('scroll', function() {
@@ -167,8 +167,5 @@
             const mostrarNav = document.querySelector('.nav-min_logo');
             mostrarNav.classList.toggle("pgj", window.scrollY > 200);
         });
-
     </script>
-</body>
-
-</html>
+</body></html>
