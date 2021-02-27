@@ -943,39 +943,39 @@ section .sobre-mi {
     .contenido-banner h1 {
         margin-top: 1em;
         margin-bottom: 7em;
-        font-size: 1.5em;
+        font-size: 2.4em;
     }
 
     .contenido-banner .typing {
         margin-top: 4em;
-        font-size: 0.7em;
+        font-size: 1.2em;
     }
 
     .contenido-banner .recorrido {
-        font: italic 10px/1.7 georgia;
+        font: italic 14px/1.7 georgia;
         letter-spacing: 1px;
         text-align: center;
     }
 
     .link_sobre-mi,
     .link_contact {
-        font-size: 12px;
+        font-size: 17px;
     }
 
     .link_sobre-mi {
         top: 45%;
-        left: 30px;
+        left: 20px;
     }
 
     .link_contact {
         top: 45%;
-        right: 30px;
+        right: 20px;
     }
 
     .botton-proyects {
         width: 11em;
         height: 3.5em;
-        font-size: 9px;
+        font-size: 13px;
         border: 2px solid #fff;
         border-radius: 50px;
     }
@@ -1036,9 +1036,9 @@ section .sobre-mi {
 
 
     .nav-min_logo {
-        width: 42px;
-        top: 12px;
-        height: 42px;
+        width: 50px;
+        top: 10px;
+        height: 50px;
     }
 
 
