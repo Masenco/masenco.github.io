@@ -38,7 +38,7 @@
 }
 
 html {
-    scroll-behavior: ;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -1030,7 +1030,7 @@ section .sobre-mi {
 }
 
 [data-name="nubes-end"] {
-    opacity: 0.8;
+    opacity: 0.9;
     animation: movimiento_nubes-end 45s linear infinite normal both;
     transform-origin: center;
     transform-box: fill-box;
@@ -1054,7 +1054,7 @@ section .sobre-mi {
 }
 
 [data-name="nubes-end2"] {
-    opacity: 0.8;
+    opacity: 0.9;
     animation: movimiento_nubes-end2 45s linear infinite normal both;
     transform-origin: center;
     transform-box: fill-box;
@@ -1079,7 +1079,7 @@ section .sobre-mi {
 }
 
 [data-name="nubes-front"] {
-    opacity: 0.8;
+    opacity: 0.9;
     animation: movimiento_nubes-front 45s linear infinite normal both;
     transform-origin: center;
     transform-box: fill-box;
@@ -1103,7 +1103,7 @@ section .sobre-mi {
 }
 
 [data-name="nubes-front2"] {
-    opacity: 0.8;
+    opacity: 0.9;
     animation: movimiento_nubes-front2 45s linear infinite normal both;
     transform-origin: center;
     transform-box: fill-box;
