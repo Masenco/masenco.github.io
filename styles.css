@@ -217,7 +217,9 @@ li {
     overflow: hidden;
 }
 
-/*---------- León SVG ----------*/
+/*------------------------- 
+-------- León SVG ---------
+--------------------------*/
 
 .leon-svg {
     position: absolute;
@@ -243,7 +245,7 @@ li {
     height: 100%;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.3);
     z-index: 1;
 }
 
@@ -254,9 +256,10 @@ li {
     height: 100%;
     top: 0;
     left: 0;
+
 }
 
-svg {
+.leon-svg svg {
     animation: svg-general 3s linear;
     transform-origin: center;
     transform-box: fill-box;
@@ -274,7 +277,70 @@ svg {
     }
 }
 
-/*---------- @Keyframes ----------*/
+/*------- @Keyframes Leon Banner -------*/
+#top-boca {
+    animation: cerrar-top_boca 16s linear infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+    animation-fill-mode: both;
+}
+
+@keyframes cerrar-top_boca {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(30px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#bottom-boca {
+    animation: cerrar-bottom_boca 16s linear infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+    animation-fill-mode: both;
+}
+
+@keyframes cerrar-bottom_boca {
+    0% {
+        transform: translateY(0) rotateZ(0deg);
+    }
+
+    50% {
+        transform: translateY(-30px) rotateZ(-4deg);
+    }
+
+    100% {
+        transform: translateY(0) rotateZ(0deg);
+    }
+}
+
+#elipse {
+    animation: achicar_elipse 16s linear infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+    animation-fill-mode: both;
+}
+
+@keyframes achicar_elipse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
 #trazo1,
 #trazo2,
 #trazo3,
@@ -501,7 +567,7 @@ svg {
     }
 
     50% {
-        transform: rotateZ(-18deg);
+        transform: rotateZ(12deg);
     }
 
     100% {
@@ -840,10 +906,8 @@ section .sobre-mi {
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    background-image: url(images/captura3.png);
-    background-size: cover;
-    background-position: center;
     justify-content: center;
+    z-index: 11;
 }
 
 .links-contact {
@@ -923,6 +987,155 @@ section .sobre-mi {
     letter-spacing: 5px;
     width: 12em;
 }
+
+/*------------------------- 
+-------- Nube SVG ---------
+--------------------------*/
+.nube-contact {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 96%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    z-index: 1;
+}
+
+.nube-contact::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.nube-contact svg {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin-left: -0.70%;
+}
+
+[data-name="nubes-end"] {
+    opacity: 0.8;
+    animation: movimiento_nubes-end 45s linear infinite normal both;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes movimiento_nubes-end {
+    0% {
+        transform: translate3d(-100px, 0, 0);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+
+    100% {
+        transform: translate3d(300px, 0, 0);
+        opacity: 0;
+    }
+}
+
+[data-name="nubes-end2"] {
+    opacity: 0.8;
+    animation: movimiento_nubes-end2 45s linear infinite normal both;
+    transform-origin: center;
+    transform-box: fill-box;
+    animation-delay: 20s;
+}
+
+@keyframes movimiento_nubes-end2 {
+    0% {
+        transform: translate3d(-100px, 0, 0);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+
+    100% {
+        transform: translate3d(300px, 0, 0);
+        opacity: 0;
+    }
+}
+
+[data-name="nubes-front"] {
+    opacity: 0.8;
+    animation: movimiento_nubes-front 45s linear infinite normal both;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes movimiento_nubes-front {
+    0% {
+        transform: translate3d(-100px, 0, 0);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+
+    100% {
+        transform: translate3d(300px, 0, 0);
+        opacity: 0;
+    }
+}
+
+[data-name="nubes-front2"] {
+    opacity: 0.8;
+    animation: movimiento_nubes-front2 45s linear infinite normal both;
+    transform-origin: center;
+    transform-box: fill-box;
+    animation-delay: 20s;
+}
+
+@keyframes movimiento_nubes-front2 {
+     0% {
+        transform: translate3d(-100px, 0, 0);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+
+    100% {
+        transform: translate3d(300px, 0, 0);
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 /*-----------------------------------------
 ---------------- Responsive -------------------
