@@ -60,9 +60,9 @@ li {
 }
 
 
-/*-------------------------------
------------- Nav PC -------------
---------------------------------*/
+/*--------------------------------------
+--------------- Nav PC -----------------
+----------------------------------------*/
 .navegation {
     position: fixed;
     display: flex;
@@ -149,8 +149,9 @@ li {
     visibility: visible;
 }
 
-/*---- Nav Móviles ----*/
-
+/*-------------------------------------
+------------- Nav Móviles -------------
+---------------------------------------*/
 .nav-moviles {
     display: none;
     position: absolute;
@@ -204,7 +205,6 @@ li {
 /*-----------------------------------------
 ---------------- Banner -------------------
 ------------------------------------------*/
-
 .banner {
     position: relative;
     display: flex;
@@ -220,7 +220,6 @@ li {
 /*------------------------- 
 -------- León SVG ---------
 --------------------------*/
-
 .leon-svg {
     position: absolute;
     display: flex;
@@ -256,10 +255,6 @@ li {
     height: 100%;
     top: 0;
     left: 0;
-
-}
-
-.leon-svg svg {
     animation: svg-general 3s linear;
     transform-origin: center;
     transform-box: fill-box;
@@ -269,16 +264,17 @@ li {
 
 @keyframes svg-general {
     from {
-        transform: scale(0.7) rotateZ(-7deg);
+        transform: scale(0.7);
     }
 
     to {
-        transform: scale(1) rotateZ(2deg);
+        transform: scale(1);
     }
 }
 
 /*------- @Keyframes Leon Banner -------*/
-#top-boca {
+
+[data-name="top-boca"] {
     animation: cerrar-top_boca 16s linear infinite;
     transform-origin: center;
     transform-box: fill-box;
@@ -299,7 +295,7 @@ li {
     }
 }
 
-#bottom-boca {
+[data-name="bottom-boca"] {
     animation: cerrar-bottom_boca 16s linear infinite;
     transform-origin: center;
     transform-box: fill-box;
@@ -308,116 +304,44 @@ li {
 
 @keyframes cerrar-bottom_boca {
     0% {
-        transform: translateY(0) rotateZ(0deg);
+        transform: translateY(0) rotate(0deg);
     }
 
     50% {
-        transform: translateY(-30px) rotateZ(-4deg);
+        transform: translateY(-30px) rotate(-4deg);
     }
 
     100% {
-        transform: translateY(0) rotateZ(0deg);
+        transform: translateY(0) rotate(0deg);
     }
 }
 
-#elipse {
-    animation: achicar_elipse 16s linear infinite;
-    transform-origin: center;
-    transform-box: fill-box;
-    animation-fill-mode: both;
-}
-
-@keyframes achicar_elipse {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.1);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-#trazo1,
-#trazo2,
-#trazo3,
-#trazo4,
-#trazo5,
-#trazo6,
-#trazo7,
-#trazo8,
-#trazo9,
-#trazo10,
-#trazo11,
-#trazo12,
-#trazo13 {
+[data-name="palo1"],
+[data-name="pelo2"],
+[data-name="pelo3"],
+[data-name="pelo4"],
+[data-name="pelo5"],
+[data-name="pelo6"],
+[data-name="pelo7"],
+[data-name="pelo8"],
+[data-name="pelo9"],
+[data-name="pelo10"],
+[data-name="pelo11"],
+[data-name="pelo12"],
+[data-name="pelo13"],
+[data-name="pelo14"],
+[data-name="pelo15"],
+[data-name="pelo16"] {
     transform-origin: center;
     transform-box: fill-box;
 }
 
 
-#trazo1 {
-    animation: trazo1 9s infinite linear;
+[data-name="pelo1"] {
+    animation: pelo1 10s infinite linear;
 }
 
-@keyframes trazo1 {
-    0% {
-        transform: rotateZ(0deg);
-    }
-
-    50% {
-        transform: rotateZ(12deg);
-    }
-
-    100% {
-        transform: rotateZ(0deg);
-    }
-}
-
-#trazo2 {
-    animation: trazo2 6s infinite linear;
-}
-
-@keyframes trazo2 {
-    0% {
-        transform: rotateZ(0deg);
-    }
-
-    50% {
-        transform: rotateZ(-10deg);
-    }
-
-    100% {
-        transform: rotateZ(0deg);
-    }
-}
-
-#trazo3 {
-    animation: trazo3 7s infinite linear;
-}
-
-@keyframes trazo3 {
-    0% {
-        transform: rotateZ(0deg);
-    }
-
-    50% {
-        transform: rotateZ(-10deg);
-    }
-
-    100% {
-        transform: rotateZ(0deg);
-    }
-}
-
-#trazo4 {
-    animation: trazo4 8s infinite linear;
-}
-
-@keyframes trazo4 {
+@keyframes pelo1 {
     0% {
         transform: rotateZ(0deg);
     }
@@ -431,11 +355,47 @@ li {
     }
 }
 
-#trazo5 {
-    animation: trazo5 6s infinite linear;
+[data-name="pelo2"] {
+    animation: pelo2 7s infinite linear;
 }
 
-@keyframes trazo5 {
+@keyframes pelo2 {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    50% {
+        transform: rotateZ(-10deg);
+    }
+
+    100% {
+        transform: rotateZ(0deg);
+    }
+}
+
+[data-name="pelo3"] {
+    animation: pelo3 8s infinite linear;
+}
+
+@keyframes pelo3 {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    50% {
+        transform: rotateZ(-10deg);
+    }
+
+    100% {
+        transform: rotateZ(0deg);
+    }
+}
+
+[data-name="pelo4"] {
+    animation: pelo4 9s infinite linear;
+}
+
+@keyframes pelo4 {
     0% {
         transform: rotateZ(0deg);
     }
@@ -449,11 +409,29 @@ li {
     }
 }
 
-#trazo6 {
-    animation: trazo6 10s infinite linear;
+[data-name="pelo5"] {
+    animation: pelo5 7s infinite linear;
 }
 
-@keyframes trazo6 {
+@keyframes pelo5 {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    50% {
+        transform: rotateZ(10deg);
+    }
+
+    100% {
+        transform: rotateZ(0deg);
+    }
+}
+
+[data-name="pelo6"] {
+    animation: pelo6 11s infinite linear;
+}
+
+@keyframes pelo6 {
     0% {
         transform: rotateZ(0deg);
     }
@@ -467,11 +445,11 @@ li {
     }
 }
 
-#trazo7 {
-    animation: trazo7 9s infinite linear;
+[data-name="pelo7"] {
+    animation: pelo7 10s infinite linear;
 }
 
-@keyframes trazo7 {
+@keyframes pelo7 {
     0% {
         transform: rotateZ(0deg);
     }
@@ -485,11 +463,11 @@ li {
     }
 }
 
-#trazo8 {
-    animation: trazo8 8s infinite linear;
+[data-name="pelo8"] {
+    animation: pelo8 9s infinite linear;
 }
 
-@keyframes trazo8 {
+@keyframes pelo8 {
     0% {
         transform: rotateZ(0deg);
     }
@@ -503,11 +481,11 @@ li {
     }
 }
 
-#trazo9 {
-    animation: trazo9 8s infinite linear;
+[data-name="pelo9"] {
+    animation: pelo9 9s infinite linear;
 }
 
-@keyframes trazo9 {
+@keyframes pelo9 {
     0% {
         transform: rotateZ(0deg);
     }
@@ -521,11 +499,11 @@ li {
     }
 }
 
-#trazo10 {
-    animation: trazo10 6s infinite linear;
+[data-name="pelo10"] {
+    animation: pelo10 7s infinite linear;
 }
 
-@keyframes trazo10 {
+@keyframes pelo10 {
     0% {
         transform: rotateZ(0deg);
     }
@@ -539,11 +517,11 @@ li {
     }
 }
 
-#trazo11 {
-    animation: trazo11 7s infinite linear;
+[data-name="pelo11"] {
+    animation: pelo11 8s infinite linear;
 }
 
-@keyframes trazo11 {
+@keyframes pelo11 {
     0% {
         transform: rotateZ(0deg);
     }
@@ -557,11 +535,11 @@ li {
     }
 }
 
-#trazo12 {
-    animation: trazo12 9s infinite linear;
+[data-name="pelo12"] {
+    animation: pelo12 10s infinite linear;
 }
 
-@keyframes trazo12 {
+@keyframes pelo12 {
     0% {
         transform: rotateZ(0deg);
     }
@@ -575,11 +553,11 @@ li {
     }
 }
 
-#trazo13 {
-    animation: trazo13 7s infinite linear;
+[data-name="pelo13"] {
+    animation: pelo13 8s infinite linear;
 }
 
-@keyframes trazo13 {
+@keyframes pelo13 {
     0% {
         transform: rotateZ(0deg);
     }
@@ -595,23 +573,7 @@ li {
 
 
 /*---------- Rayos ----------*/
-#rayos {
-    animation: rayo1 2s;
-    transform-origin: center;
-    transform-box: fill-box;
-    animation-fill-mode: both;
-}
 
-@keyframes rayo1 {
-
-    from {
-        transform: scale(0.7);
-    }
-
-    to {
-        transform: scale(1.2);
-    }
-}
 
 /*-----------------------------
 ------ Contenido Banner ------
@@ -988,9 +950,9 @@ section .sobre-mi {
     width: 12em;
 }
 
-/*------------------------- 
--------- Nube SVG ---------
---------------------------*/
+/*----------------------------------- 
+------------- Nube SVG --------------
+-------------------------------------*/
 .nube-contact {
     position: absolute;
     display: flex;
@@ -1029,8 +991,28 @@ section .sobre-mi {
     margin-left: -0.70%;
 }
 
+[data-name="Ojos"] {
+    animation: cerrar_ojos 6s linear infinite normal both;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes cerrar_ojos {
+    0% {
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 [data-name="nubes-end"] {
-    opacity: 0.9;
+    opacity: 0.8;
     animation: movimiento_nubes-end 45s linear infinite normal both;
     transform-origin: center;
     transform-box: fill-box;
@@ -1054,7 +1036,7 @@ section .sobre-mi {
 }
 
 [data-name="nubes-end2"] {
-    opacity: 0.9;
+    opacity: 0.8;
     animation: movimiento_nubes-end2 45s linear infinite normal both;
     transform-origin: center;
     transform-box: fill-box;
@@ -1079,7 +1061,7 @@ section .sobre-mi {
 }
 
 [data-name="nubes-front"] {
-    opacity: 0.9;
+    opacity: 0.8;
     animation: movimiento_nubes-front 45s linear infinite normal both;
     transform-origin: center;
     transform-box: fill-box;
@@ -1103,7 +1085,7 @@ section .sobre-mi {
 }
 
 [data-name="nubes-front2"] {
-    opacity: 0.9;
+    opacity: 0.8;
     animation: movimiento_nubes-front2 45s linear infinite normal both;
     transform-origin: center;
     transform-box: fill-box;
@@ -1111,7 +1093,7 @@ section .sobre-mi {
 }
 
 @keyframes movimiento_nubes-front2 {
-     0% {
+    0% {
         transform: translate3d(-100px, 0, 0);
         opacity: 0;
     }
@@ -1153,26 +1135,34 @@ section .sobre-mi {
         flex-direction: column;
     }
 
+    .leon-svg {
+        width: 260%;
+        transform: translateX(-30%);
+        margin-top: 8%;
+    }
+
+
     .contenido-banner h1 {
-        margin-top: 1em;
+        margin-top: 5%;
         margin-bottom: 7em;
-        font-size: 2.4em;
+        font-size: 1.6em;
     }
 
     .contenido-banner .typing {
-        margin-top: 4em;
-        font-size: 1.2em;
+        margin-top: 40%;
+        font-size: 1em;
     }
 
     .contenido-banner .recorrido {
         font: italic 14px/1.7 georgia;
         letter-spacing: 1px;
         text-align: center;
+        margin-top: -2%;
     }
 
     .link_sobre-mi,
     .link_contact {
-        font-size: 17px;
+        font-size: 16px;
     }
 
     .link_sobre-mi {
@@ -1243,6 +1233,8 @@ section .sobre-mi {
 
 
 
+
+
     .navegation.pgj .logo {
         font-size: 1em;
     }
@@ -1253,6 +1245,8 @@ section .sobre-mi {
         top: 10px;
         height: 50px;
     }
+
+
 
 
 
@@ -1297,8 +1291,5 @@ section .sobre-mi {
         letter-spacing: 5px;
         width: 12em;
     }
-
-
-
 
 }
