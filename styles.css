@@ -26,15 +26,15 @@
 }
 
 :root {
-    --main-btn-color: #0081CF;
-    --main-proyect0-color: #111111;
-    --main-proyect1-color: #AAAAA8;
-    --main-proyect2-color: #F3AB00;
-    --main-proyect3-color: #89D4D0;
-    --main-proyect4-color: #FFA5B4;
-    --main-proyect5-color: #2F7BAF;
-    --main-proyect6-color: #060A14;
-    --main-proyect7-color: #C3C3C3;
+    --blue: #0081CF;
+    --black: #111111;
+    --gray: #AAAAA8;
+    --yellow: #F3AB00;
+    --aquamarine1: #89D4D0;
+    --aquamarine2: #2F7BAF;
+    --pink: #FFA5B4;
+    --dark-violet: #0a0c12;
+    --gray-white: #C3C3C3;
 }
 
 html {
@@ -61,7 +61,7 @@ li {
 
 
 /*--------------------------------------
---------------- Nav PC -----------------
+--------------- Navegation -----------------
 ----------------------------------------*/
 .navegation {
     position: fixed;
@@ -70,136 +70,98 @@ li {
     top: -100px;
     margin: 0;
     width: 100%;
-    height: 55px;
-    background: #000;
+    height: 70px;
+    background: var(--dark-violet);
     justify-content: space-between;
-    padding: 0 20px 0 20px;
+    padding-left: 4%;
+    padding-right: 4%;
     align-items: center;
     transition: .5s;
     font-family: "Poppins", sans-serif;
-    z-index: 1000;
+    z-index: 100000;
 }
 
 .navegation.pgj {
-    background: rgba(0, 0, 0, 0.9);
-    height: 60px;
     top: 0;
 }
 
-.navegation.pgj ul li {
-    margin-right: 2em;
-}
-
-.navegation.pgj .logo {
-    font-size: 1.5em;
-}
-
-.navegation .logo {
+.social_links {
     position: relative;
-    font-size: 1.6em;
-    line-height: 0.8em;
+    width: 50%;
 }
 
-.navegation nav {
-    position: relative;
-}
-
-.navegation ul {
+.social_links ul {
     display: flex;
     flex-direction: row;
 }
 
-.navegation ul li {
+.social_links ul li {
     margin-right: 2em;
 }
 
-.navegation ul li a {
-    font-size: 1em;
-    transition: .4s;
+.social_links ul li a {
+    width: auto;
+    height: auto;
 }
 
-.navegation ul li a:hover {
-    letter-spacing: 2px;
-    color: var(--main-btn-color);
+.social_links ul li a i {
+    font-size: 1.4em;
+    transition: .3s;
 }
 
-.nav-min_logo {
-    display: block;
-    visibility: hidden;
-    position: absolute;
-    top: 4px;
-    left: 0;
-    right: 0;
-    margin-right: auto;
-    margin-left: auto;
-    width: 80px;
-    height: 80px;
-    z-index: 11;
-    background-image: url(images/wolf1.png);
-    background-size: cover;
-    transition: transform .5s;
+.social_links ul li a i:hover {
+    color: var(--yellow);
 }
 
-.nav-min_logo:hover {
-    background-image: url(images/wolf2.png);
-    transform: scale(1.1);
+.nav {
+    position: relative;
+    width: 50%;
 }
 
-.nav-min_logo.pgj {
-    visibility: visible;
-}
-
-/*-------------------------------------
-------------- Nav Móviles -------------
----------------------------------------*/
-.nav-moviles {
-    display: none;
-    position: absolute;
-    left: 0;
-    bottom: 0;
+.nav ul {
     display: flex;
-    background: #fff;
-    width: 100%;
-    height: 86%;
-    z-index: 0;
-    justify-content: center;
+    justify-content: flex-end;
+    flex-direction: row;
 }
 
-.nav-moviles ul li a {
-    color: #111;
-    font-family: "Poppins", sans-serif;
-    font-size: 2em;
+.nav ul li {
+    margin-left: 2em;
 }
 
-.nav-moviles ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+.nav ul li a {
+    font-size: 0.9em;
+    transition: .3s;
+    text-transform: uppercase;
 }
 
-.nav-moviles.active {
-    display: flex;
-    z-index: 1000;
+.nav ul li a:hover {
+    color: var(--yellow);
 }
 
 .toggle-menu {
-    position: relative;
-    width: 1.5em;
-    height: 1.4em;
-    background: url(images/menu.png);
-    background-size: cover;
     display: none;
-}
-
-.toggle-menu.active {
-    background: url(images/close.png);
-    background-size: cover;
+    position: absolute;
+    right: 20px;
+    width: 22px;
+    height: 22px;
 }
 
 .toggle-menu i {
-    font-size: 1em;
+    width: 100%;
+    height: 100%;
+    font-size: 1.6em;
     color: #fff;
+}
+
+.toggle-menu:hover i {
+    cursor: pointer;
+    color: var(--yellow);
+}
+
+.toggle-menu.active i {
+    background-image: url(images/close.png);
+    color: transparent;
+    background-size: cover;
 }
 
 /*-----------------------------------------
@@ -316,7 +278,7 @@ li {
     }
 }
 
-[data-name="palo1"],
+[data-name="pelo1"],
 [data-name="pelo2"],
 [data-name="pelo3"],
 [data-name="pelo4"],
@@ -571,14 +533,9 @@ li {
     }
 }
 
-
-/*---------- Rayos ----------*/
-
-
 /*-----------------------------
 ------ Contenido Banner ------
 ------------------------------*/
-
 .contenido-banner {
     position: relative;
     display: flex;
@@ -589,9 +546,6 @@ li {
     left: 0;
     margin-left: auto;
     margin-right: auto;
-    /*- background-image: url(images/leon.png);
-    background-size: cover;
-    background-position: center;-*/
     justify-content: center;
     align-items: center;
     z-index: 1111;
@@ -629,76 +583,85 @@ li {
     font-family: 'FuturaStdBold';
     letter-spacing: 2px;
     text-transform: uppercase;
-    margin-top: 1em;
+    margin-top: 5em;
 }
 
 .contenido-banner .recorrido {
     position: relative;
     color: #fff9;
-    margin-top: 3em;
+    margin-top: 1em;
     margin-left: 8px;
     margin-bottom: 1em;
     font: italic 16px/1.7 georgia;
     letter-spacing: 1px;
 }
 
-.link_sobre-mi,
-.link_contact {
+.links_banner {
     position: absolute;
-    width: auto;
+    width: 100%;
+    top: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links_banner li {
+    display: flex;
+    width: 90px;
+    height: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 11111;
+}
+
+.links_banner li a {
+    width: 100%;
     height: auto;
-    font-size: 14px;
-    color: #fff;
+    font-size: 0.7em;
+    color: var(--gray-white);
     font-family: 'FuturaStdBold';
-    z-index: 2;
     text-transform: uppercase;
     letter-spacing: 0.20em;
 }
 
-.link_sobre-mi {
-    top: 50%;
-    left: 80px;
+.links_banner li:hover {
+    cursor: pointer;
 }
 
-.link_sobre-mi::before,
-.link_contact::before {
+.links_banner li::before {
     display: block;
     position: absolute;
     bottom: 25px;
     left: 50%;
-    width: 1.5px;
+    width: 1px;
     height: 15px;
     background: #ffb96c;
     content: '';
     transition: .3s;
 }
 
-.link_sobre-mi:hover::before,
-.link_contact:hover::before {
+.links_banner li:hover::before {
     height: 22px;
 }
 
-.link_sobre-mi::after,
-.link_contact::after {
+.links_banner li::after {
     display: block;
     position: absolute;
     top: 25px;
     left: 50%;
-    width: 1.5px;
+    width: 1px;
     height: 15px;
     background: #ffb96c;
     content: '';
     transition: .3s;
 }
 
-.link_sobre-mi:hover::after,
-.link_contact:hover::after {
+.links_banner li:hover::after {
     height: 22px;
-}
-
-.link_contact {
-    top: 50%;
-    right: 80px;
 }
 
 .botton-proyects {
@@ -793,19 +756,19 @@ li {
 }
 
 .card:nth-child(1) {
-    background: var(--main-proyect5-color);
+    background: var(--aquamarine1);
 }
 
 .card:nth-child(2) {
-    background: var(--main-proyect4-color);
+    background: var(--pink);
 }
 
 .card:nth-child(3) {
-    background: var(--main-proyect3-color);
+    background: var(--aquamarine2);
 }
 
 .card:nth-child(4) {
-    background: var(--main-proyect2-color);
+    background: var(--yellow);
 }
 
 .card .info-proyect {
@@ -1123,8 +1086,39 @@ section .sobre-mi {
 ---------------- Responsive -------------------
 ------------------------------------------*/
 @media (max-width: 760px) {
-    .navegation nav {
-        display: none;
+    .nav {
+        right: 300%;
+        transition: .6s;
+    }
+
+    .nav.active {
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--blue);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav.active ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav ul li {
+        margin-left: 0;
+        margin-bottom: 1em;
+    }
+
+    .nav ul li a {
+        font-size: 2.5em;
+    }
+
+    .nav ul li a:active {
+        color: var(--yellow);
     }
 
     .toggle-menu {
@@ -1136,20 +1130,20 @@ section .sobre-mi {
     }
 
     .leon-svg {
-        width: 260%;
+        width: 270%;
         transform: translateX(-30%);
         margin-top: 8%;
     }
 
 
     .contenido-banner h1 {
-        margin-top: 5%;
+        margin-top: 6%;
         margin-bottom: 7em;
-        font-size: 1.6em;
+        font-size: 1.8em;
     }
 
     .contenido-banner .typing {
-        margin-top: 40%;
+        margin-top: 25%;
         font-size: 1em;
     }
 
@@ -1195,29 +1189,19 @@ section .sobre-mi {
     .proyects .card {
         flex-direction: row;
         width: calc(100% - 0.1px);
-        height: 300px;
-        text-align: center;
-        align-items: center;
-        justify-content: flex-start;
+        height: 450px;
         z-index: 3;
     }
 
     .card .image-proyect {
-        width: calc(70% - 10px);
+        width: calc(65% - 10px);
     }
 
     .card .info-proyect {
         position: relative;
-        margin-left: 45px;
-        opacity: 0;
-        transition: .3s;
-        text-align: start;
-        left: -300px;
-    }
-
-    .card:hover .info-proyect {
-        cursor: pointer;
+        margin-left: 10px;
         opacity: 1;
+        bottom: -33%;
         left: 0;
     }
 

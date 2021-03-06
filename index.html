@@ -19,33 +19,24 @@
 <body>
     <!-------------- Navegación --------------
    -------------------------------------->
-    <div class="navegation" id="navegation">
-        <div class="logo">
-            <a href="#">Tomás<br>Atampi</a>
-        </div>
-        <a href="#top" class="nav-min_logo">
-        </a>
-        <div class="toggle-menu" onclick="activarMenu();">
-        </div>
-        <nav>
+   <div class="navegation" id="navegation">
+   <div class="social_links">
+       <ul>
+           <li><a href=""><i class="fab fa-instagram"></i></a></li>
+           <li><a href=""><i class="fab fa-whatsapp"></i></a></li>
+       </ul>
+       </div>
+   <div class="nav">
             <ul>
-                <li><a href="#top">Home</a></li>
-                <li><a href="#proyects">Projectos</a></li>
-                <li><a href="#about">Sobre mí</a></li>
-                <li><a href="#contact">Contacto</a></li>
+                <li><a href="#top" onclick="desactivarMenu();">Home</a></li>
+                <li><a href="#proyects" onclick="desactivarMenu();">Projectos</a></li>
+                <li><a href="#about" onclick="desactivarMenu();">Sobre mí</a></li>
+                <li><a href="#contact" onclick="desactivarMenu();">Contacto</a></li>
             </ul>
-        </nav>
-    </div>
+        </div>
 
-    <!-------------- Nav Móviles --------------
-            -------------------------------------->
-    <div class="nav-moviles">
-        <ul>
-            <li><a href="#top">Home</a></li>
-            <li><a href="#projects">Projectos</a></li>
-            <li><a href="#about">Sobre mí</a></li>
-            <li><a href="#contact">Contacto</a></li>
-        </ul>
+            <a class="toggle-menu" onclick="activarMenu();"><i class="fas fa-bars"></i></a>
+    
     </div>
     <!-------------- Banner --------------
    -------------------------------------->
@@ -323,14 +314,15 @@
   </g>
 </svg>
         </div>
-
-        <div class="link_sobre-mi"><a href="#sobre-mi">Sobre mí</a></div>
-        <div class="link_contact"><a href="#contact">Contacto</a></div>
+        <ul class="links_banner">
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
         <div class="contenido-banner">
-            <h1 data-0-top="opacity:0;left:600px;" data-100-top="opacity:1;left:0px;">Tomás Atampi</h1>
-            <span class="typing" data-0-top="opacity:0;left:-600px;" data-100-top="opacity:1;left:0px;"></span>
-            <p class="recorrido" data-0-top="opacity:0;left:600px;" data-100-top="opacity:1;left:0px;">Haga un recorrido por mis proyectos y trabajos.</p>
-            <a href="#proyects" class="botton-proyects" data-0-top="opacity:0;left:-600px;" data-100-top="opacity:1;left:0px;">Proyectos</a>
+            <h1>Tomás Atampi</h1>
+            <span class="typing"></span>
+            <p class="recorrido">Haga un recorrido por mis proyectos y trabajos.</p>
+            <a href="#proyects" class="botton-proyects">Proyectos</a>
         </div>
     </div>
     <!-------------- Proyectos --------------
@@ -384,7 +376,6 @@
 
     <!-------------- Contacto --------------
    -------------------------------------->
-
     <section class="contact" id="contact">
        <div class="nube-contact">
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 923 516">
@@ -829,7 +820,6 @@
     <!--------------- Footer ----------------
    -------------------------------------->
     <footer>
-
     </footer>
     <script>
         var typed = new Typed('.typing', {
@@ -847,13 +837,7 @@
     </script> -->
     <script type="text/javascript">
         window.addEventListener('scroll', function() {
-            const ocultarNav = document.querySelector('.nav-moviles');
-            ocultarNav.classList.toggle("pgj", window.scrollY > 200);
-
-            const ocultarNavMin = document.querySelector('.navegation');
-            ocultarNavMin.classList.toggle("pgj", window.scrollY > 200);
-
-            const mostrarNav = document.querySelector('.nav-min_logo');
+            const mostrarNav = document.querySelector('.navegation');
             mostrarNav.classList.toggle("pgj", window.scrollY > 200);
         });
     </script>
